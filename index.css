@@ -99,12 +99,15 @@ input[type="radio"]{
 
 .gifs-check{
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-direction: column;
     margin: 16px;
 }
 
-.gifs-check-label{
+.check-option {
+    display: flex;
+}
+
+.gifs-check-label, .imgs-check-label {
     width: unset;
     margin-right: 5px;
 }

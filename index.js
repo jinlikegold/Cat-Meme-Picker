@@ -2,7 +2,8 @@ import { catsData } from '/data.js'
 
 const emotionRadios = document.getElementById('emotion-radios')
 const getImageBtn = document.getElementById('get-image-btn')
-const gifsOnlyOption = document.getElementById('gifs-only-option')
+const gifsOption = document.getElementById('gifs-option')
+const imgsOption = document.getElementById('imgs-option')
 const memeModalInner = document.getElementById('meme-modal-inner')
 const memeModal = document.getElementById('meme-modal')
 const memeModalCloseBtn = document.getElementById('meme-modal-close-btn')
@@ -56,14 +57,16 @@ function getSingleCatObject(){
 function getMatchingCatsArray(){     
     if(document.querySelector('input[type="radio"]:checked')){
         const selectedEmotion = document.querySelector('input[type="radio"]:checked').value
-        const isGif = gifsOnlyOption.checked
+        const isGif = gifsOption.checked
+        const isImg = imgsOption.checked
         
         const matchingCatsArray = catsData.filter(function(cat){
             
-            if(isGif){
+            if(isGif && !isImg){
                 return cat.emotionTags.includes(selectedEmotion) && cat.isGif
-            }
-            else{
+            } else if (!isGif && isImg){
+                return cat.emotionTags.includes(selectedEmotion) && !cat.isGif
+            } else{
                 return cat.emotionTags.includes(selectedEmotion)
             }            
         })
