@@ -97,13 +97,13 @@ input[type="radio"]{
     cursor: pointer;
 }
 
-.gifs-check{
+.limit-type{
     display: flex;
     flex-direction: column;
     margin: 16px;
 }
 
-.check-option {
+.type-option {
     display: flex;
 }
 
