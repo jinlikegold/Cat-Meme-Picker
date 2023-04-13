@@ -2,7 +2,10 @@
 
 This project is from Scrimba's Frontend Career Path, Javascript Essentials module. 
 
-While this was based a tutorial, I wrote each piece of code myself, as well as added an additional functionality that allows for the meme popup window to be closed via not only the "X" button on the popup, but also when clicking anywhere outside the popup itself. 
+While this was based a tutorial, I wrote each piece of code myself, as well as added some additional features for better UX:
+
+1) Allowing for the meme popup window to be closed via not only the "X" button on the popup, but also when clicking anywhere outside the popup itself. 
+2) Modified the original feature of selecting only GIF's so that there is an option for the user to select whether they want to see GIFS only, Images only, or both. After watching someone test out the app who wanted to cycle through all meme options available, the need for this feature became apparent to me, as otherwise the randomizing function did not guarantee that all options would pop up immediately!
 
 What I learned & practiced:
 * the logical "not" operator
